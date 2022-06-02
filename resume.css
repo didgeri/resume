@@ -1,0 +1,37 @@
+h1, h2, h3, h4 { font-family: "lora", "abril", "Times New Roman", Times, serif; }
+p, li { font-family: "open sans", "Segoe UI", Tahoma, sans-serif; }
+a:link.dark_bg, a:visited.dark_bg { color: white; }
+a:link.light_bg, a:visited.light_bg { color: black; }
+a:hover.dark_bg, a:hover.light_bg, a:hover { color: green; }
+
+.item1 { grid-area: lefttop; background-color: #242424; color: white; padding: 35px; }
+.item2 { grid-area: left; background-color: #c7c7c7; padding: 35px; }
+.item3 { grid-area: right; background-color: white; padding: 35px; }
+
+.grid-container {
+  grid-template-areas:
+    'lefttop'
+    'left'
+    'right';
+  grid-template-columns: 100%;
+}
+
+@media all and (min-width: 768px) {
+  [class*="grid-container"] {
+    display: grid;
+    grid-template-columns: 29% 71%;
+    grid-template-areas:
+      'lefttop right'
+      'left right';
+    }
+}
+
+@media only print {
+  [class*="grid-container"] {
+    display: grid;
+    grid-template-columns: 29% 71%;
+    grid-template-areas:
+      'lefttop right'
+      'left right';
+    }
+}
