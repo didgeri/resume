@@ -1,111 +1,287 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <script src="https://kit.fontawesome.com/988c488ca7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="resume.css">
+    <script src="https://kit.fontawesome.com/988c488ca7.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        h1, h2, h3, h4 {
+            font-family: "lora", "abril", "Times New Roman", Times, serif;
+        }
+
+        p, li {
+            font-family: "open sans", "Segoe UI", Tahoma, sans-serif;
+        }
+
+        a:link.dark_bg,
+        a:visited.dark_bg {
+            color: white;
+        }
+
+        a:link.light_bg, a:visited.light_bg {
+            color: black;
+        }
+
+        a:hover.dark_bg, a:hover.light_bg, a:hover {
+            color: green;
+        }
+
+        .item1 {
+            grid-area: lefttop;
+            background-color: #242424;
+            color: white;
+            padding: 35px;
+        }
+
+        .item2 {
+            grid-area: left;
+            background-color: #c7c7c7;
+            padding: 35px;
+        }
+
+        .item3 {
+            grid-area: right;
+            background-color: white;
+            padding: 35px;
+        }
+
+        .grid-container {
+            grid-template-areas:
+                'lefttop'
+                'left'
+                'right';
+            grid-template-columns: 100%;
+        }
+
+        @media all and (min-width: 768px) {
+            [class*="grid-container"] {
+                display: grid;
+                grid-template-columns: 29% 71%;
+                grid-template-rows: 17% 83% 100%;
+                grid-template-areas:
+                    'lefttop right'
+                    'left right';
+            }
+        }
+
+        @media only print {
+            [class*="grid-container"] {
+                display: grid;
+                grid-template-columns: 29% 71%;
+                grid-template-areas:
+                    'lefttop right'
+                    'left right';
+            }
+        }
+    </style>
 </head>
+
 <body>
-
-  <div class="grid-container">
-    <div class="item1">
-      <h1>Daniel Ging</h1>
-      <h2>Software Developer</h2>
-      <p>
-        <a href="mailto:didgeri@gmail.com" target="none" class="dark_bg"><i class="fa-solid fa-envelope"></i> didgeri@gmail.com<br></a>
-        <i class="fa-solid fa-phone"></i> (682) 283-8871<br>
-        <i class="fa-solid fa-location-dot"></i> Dallas, TX<br>
-        <a href="https://www.linkedin.com/in/dging/" target="none" class="dark_bg"><i class="fa-brands fa-linkedin"></i> linkedin</a>
-      </p>
+    <div class="grid-container">
+        <div class="item1">
+            <h1>Daniel Ging</h1>
+            <h2>Software Developer</h2>
+            <p>
+                <a href="mailto:didgeri@gmail.com" target="none" class="dark_bg"><i class="fa-solid fa-envelope"></i>
+                    didgeri@gmail.com<br></a>
+                <i class="fa-solid fa-phone"></i> (682) 283-8871<br>
+                <i class="fa-solid fa-location-dot"></i> Dallas, TX<br>
+                <a href="https://www.linkedin.com/in/dging/" target="none" class="dark_bg"><i
+                        class="fa-brands fa-linkedin"></i> linkedin</a>
+            </p>
+        </div>
+        <div class="item2">
+            <h2>Education</h2>
+            <h4><a href="https://www.berklee.edu/" target="none" class="light_bg"><strong>Berklee College of Music</strong></a></h4>
+            <p>
+                Bachelor of Professional Studies<br>in Music Production<br>
+                <i class="fa-solid fa-calendar-days"></i> 2017-2019<br>
+                <i class="fa-solid fa-location-dot"></i> Boston, MA<br>
+                3.9/4 GPA<br>
+                Dean's list
+            </p>
+            <h4><a href="https://ywamherrnhut.com/" target="none" class="light_bg"><strong>Youth With a Mission (YWAM)</strong></a></h4>
+            <p>
+                Marriage of the Arts<br>
+                Discipleship Training School<br>
+                with Music Track Specialization<br>
+                <i class="fa-solid fa-calendar-days"></i> September 2011 - April 2012<br>
+                <i class="fa-solid fa-location-dot"></i> Herrnhut, Germany
+            </p>
+            <h4><a href="https://www.imb.org/about/" target="none" class="light_bg"><strong>International Mission Board</strong></a>
+            </h4>
+            <p>
+                Field Personnel Orientation<br>
+                <i class="fa-solid fa-calendar-days"></i> June 2015 - September 2015<br>
+                <i class="fa-solid fa-location-dot"></i> Richmond, Virginia
+            </p>
+            <h2>Certifications</h2>
+            <p>
+            <ul>
+                <li><a href="https://ifoc.org/chaplaincy-training/" target="none" class="light_bg">IFOC Chaplancy Training</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/front-end-certification-exam" target="none" class="light_bg">Front End Dev</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/javascript-certification-exam" target="none" class="light_bg">JavaScript</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/php-certification-exam" target="none" class="light_bg">PHP</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/sql-certification-exam" target="none" class="light_bg">SQL</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/html-certification-exam" target="none" class="light_bg">HTML</a></li>
+                <li><a href="https://courses.w3schools.com/browse/certifications/courses/css-certification-exam" target="none" class="light_bg">CSS</a></li>
+                <li><a href="https://trailhead.salesforce.com/en/credentials/administrator" target="none" class="light_bg">Salesforce Admin</a></li>
+            </ul>
+            </p>
+            <h2>Skills</h2>
+            <p>
+            <ul>
+                <li>20 years experience running church sound and audio/visual</li>
+                <li>Music engineering, mixing, production, and mastering</li>
+                <li><a  href="https://www.avid.com/pro-tools" target="none" class="light_bg">Pro Tools</a>, <a href="https://www.apple.com/logic-pro/" target="none" class="light_bg">Logic Pro</a>, <a href="https://www.reasonstudios.com/en/reason" target="none" class="light_bg">Reason</a>, and <a href="https://www.izotope.com/en/products.html" target="none" class="light_bg">Izotope Mastering and Audio Repair Software</a></li>
+                <li>Acoustic design and treatment</li>
+                <li>Accomplished musician (drums, guitar, songwriting, bass, piano, vocals)</li>
+                <li>Electrical installation, construction, woodworking</li>
+            </ul>
+            </p>
+        </div>
+        <div class="item3">
+            <h2>Objectives</h2>
+            <p>
+            <ul>
+                <li>Disciple, lead, and participate with the church in creating fragrant worship.</li>
+                <li>Grow a community of songwriters and leaders who draw the church into deeper worship with their heart and craft.</li>
+                <li>Provide the church with concise, modern, and helpful solutions to technological problems.</li>
+            </ul>
+            </p>
+            <h3>Personal Calling and Passions</h3>
+            <p>
+                I am called to bless the church and serve Jesus by encouraging beautiful and sincere worship.  It gives me great pleasure to support other artists and to help them realize their artisic vision by producing, engineering, co-writing, or playing on their work.
+            </p>
+            <h2>Work Experience</h2>
+            <a href="https://venntechnology.com" target="none" class="light_bg">
+                <h3>Venn Technology</h3>
+            </a>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> September 2019 - current &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Grapevine, TX<br>
+            </p>
+            <h4>Developer</h4>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> September 2022 - current<br>
+            <ul>
+                <li>Developed custom integrations using <a href="https://rubyonrails.org/" target="none" class="light_bg">Ruby on Rails</a>, specifically designed for high volume and high concurrency.</li>
+                <li>Wrote platform specific help content for developing integrations on Venn's proprietary Ruby on Rails application.</li>
+                <li>Consulted as resident content expert for Intacct, Stripe, Hubspot, and Shopify integrations.</li>
+                <li>Defined structure and milestones for department wide projects concerning Intacct, Stripe, Hubspot, and Shopify integrations.</li>
+            </ul>
+            </p>
+            <h4>Senior Integration Consultant</h4>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> January 2022 - September 2022<br>
+            <ul>
+                <li>Developed and administrated 4 Workato custom SDK API wrappers for Stripe, Shopify, Hubspot, and Planning Center API's.</li>
+                <li>Trained new employees on integration best practices, general programming concepts, and debugging techniques.</li>
+                <li>Built and supported a network of stable demo integrations for the Venn Technology sales team for Salesforce, Stripe, Shopify, Hubspot, and Intacct.</li>
+            </ul>
+            </p>
+            <h4>Integration Consultant</h4>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> September 2019 - December 2021<br>
+            <ul>
+                <li>Designed and built over 75 custom integrations for different clients, solving complex data mapping and transformation issues between various platforms, including e-commerce, finance, and CRM applications.</li>
+                <li>Maintained 10+ reusable solutions for use by other team members in a copyable repository for Stripe, Square, Shopify, Hubspot, Planning Center, and Intacct. This includes batched and individual record versions.</li>
+            </ul>
+            </p>
+            <br>
+            <h3><a href="https://calvarytyler.org" target="none" class="light_bg">Calvary Baptist Church</a></h3>
+            <h4>Missionary Project Manager</h4>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> May 2015 - August 2019 &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Tyler, TX<br>
+            <ul>
+                <li>Created a strategy to evangelize an unreached people group in the remote mountains of East Asia.</li>
+                <li>Facilitated and engineered the recording of indigenous language audio resources.</li>
+                <li>Maintained proficiency in the Mandarin Chinese language.</li>
+                <li>Reported to the church on the status of engagement with the unreached people group.</li>
+                <li>Functioned in a matrix organization with the International Mission Board and Calvary Baptist church.</li>
+                <li>Adapted to constantly shifting challenges.</li>
+                <li>Supported a team of workers towards common goals.</li>
+            </ul>
+            </p>
+            <h3><a href="https://goo.gl/maps/B8XG19DbgQyYTtvy5" target="none" class="light_bg">My Electrician</a></h3>
+            <h4>Apprentice Electrician</h4>
+            <p>
+            <i class="fa-solid fa-calendar-days"></i> September 2013 - May 2015 &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Tyler, TX<br>
+            <ul>
+                <li>Repaired and replaced wiring, equipment, and fixtures for residential and commercial customers.</li>
+                <li>Tested, inspected, and problem-solved electrical systems for issues and code violations.</li>
+                <li>Planned layout of and installed electrical wiring based on job specifications and local code.</li>
+                <li>Safely handled working with high amperage main service lines and disconnects.</li>
+            </ul>
+            </p>
+            <h3><a href="https://ywam.org/" target="none" class="light_bg">Youth With A Mission (YWAM)</a></h3>
+            <h4>Staff</h4>
+            <p>
+                <i class="fa-solid fa-calendar-days"></i> April 2012 - August 2013 &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Cheb, Czech Republic &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Herrnhut, Germany<br>
+            <ul>
+                <li>Produced, mixed, and mastered many artist recordings at the Hernnhut, Germany recording studio.</li>
+                <li>Organized and led worship times for all Cheb, Czech Republic DTS (Discipleship Training School) meetings and sessions.</li>
+                <li>Developed and taught a curriculum on the subject of worship for Cheb DTS worship week.</li>
+                <li>Conducted one on one meetings with assigned DTS students and was responsible for general Discipleship of all Cheb DTS students.</li>
+                <li>Co-planned and co-led local and international outreaches with groups of Cheb DTS students.</li>
+                <li>Record, mix, and distribute weekly DTS speaker's lectures.</li>
+                <li>Wrote, recorded, mixed, and mastered <a href="https://www.youtube.com/watch?v=Ij8qt9Qz_fc" target="none" class="light_bg">promotional video soundtrack</a> for Cheb DTS.</li>
+            </ul>
+            </p>
+        </div>
     </div>
-      <div class="item2">
-        <h2>Education</h2>
-        <p>
-          Bachelor of Professional Studies in Music Production<br>
-          <a href="https://www.berklee.edu/" target="none" class="light_bg"><strong>Berklee College of Music</strong></a><br>
-          <i class="fa-solid fa-calendar-days"></i> 2017-2019<br>
-          <i class="fa-solid fa-location-dot"></i> Boston, MA<br>
-          3.9/4 GPA<br>
-          Dean's list
-        </p>
-        <h2>Certifications</h2>
-        <p>
-          <ul>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/front-end-certification-exam" target="none" class="light_bg"><li>Front End Dev</li></a>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/javascript-certification-exam" target="none" class="light_bg"><li>JavaScript</li></a>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/php-certification-exam" target="none" class="light_bg"><li>PHP</li></a>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/sql-certification-exam" target="none" class="light_bg"><li>SQL</li></a>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/html-certification-exam" target="none" class="light_bg"><li>HTML</li></a>
-            <a href="https://courses.w3schools.com/browse/certifications/courses/css-certification-exam" target="none" class="light_bg"><li>CSS</li></a>
-            <a href="https://www.workato.com/" target="none" class="light_bg"><li>Workato Automation Pro</li></a>
-            <a href="https://trailhead.salesforce.com/en/credentials/administrator" target="none" class="light_bg"><li>Salesforce Admin</li></a>
-          </ul>
-        </p>
-        <h2>Skills</h2>
-        <p>
-          <ul>
-            <li>Ruby programming language</li>
-            <li>Accomplished musician (drums, guitar, songwriting, bass, piano)</li>
-            <li>Music engineering, mixing, production, and mastering</li>
-            <li>Acoustic design and treatment</li>
-            <li>Woodworking, construction, and electrical installation (built a farmhouse in a Chinese village)</li>
-          </ul>
-        </p>
-      </div>
-      <div class="item3">
-        <h2>Career Objective</h2>
-        <p>
-          Fast learning programmer with hundreds of hours of client interaction. 
-          Looking to continue developing skillset by implementing new and unique solutions for clients. 
-          Works well in team or solo situations, and is excited about spearheading new efforts that require 
-          research and problem solving skills.
-        </p>
-        <h2>Work Experience</h2>
-        <a href="https://venntechnology.com" target="none" class="light_bg"><h3>Venn Technology</h3></a>
-        <h4>Senior Integration Consultant</h4>
-        <p>
-          <i class="fa-solid fa-calendar-days"></i> January 2022 - current &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Grapevine, TX<br>
-          <ul>
-            <li>Developed and administrated 4 Workato custom SDK API wrappers for Stripe, 
-                Shopify, Hubspot, and Planning Center API's.</li>
-            <li>Trained new employees on integration best practices, general programming concepts, and debugging techniques.</li>
-            <li>Built and supported a network of stable demo integrations for the Venn Technology sales team for Salesforce, 
-                Stripe, Shopify, Hubspot, and Intacct.</li>
-          </ul>
-        </p>
-        <h4>Integration Consultant</h4>
-        <p>
-          <i class="fa-solid fa-calendar-days"></i> September 2019 - December 2021<br>
-          <ul>
-            <li>Designed and built over 75 custom integrations for different clients, solving complex data mapping and 
-                transformation issues between various platforms, including e-commerce, finance, and CRM applications.</li>
-            <li>Maintained 10+ reusable solutions for use by other team members in a copyable repository for Stripe, Square, 
-                Shopify, Hubspot, Planning Center, and Intacct. This includes batched and individual record versions.</li>
-          </ul>
-        </p>
-        <br>
-        <a href="https://calvarytyler.org" target="none" class="light_bg"><h3>Calvary Baptist Church</h3></a>
-        <h4>Missionary Project Manager</h4>
-        <p>
-          <i class="fa-solid fa-calendar-days"></i> May 2015 - August 2019 &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i> Tyler, TX<br>
-          <ul>
-            <li>Created a strategy to evangelize an unreached people group in the remote mountains of East Asia.</li>
-            <li>Facilitated and engineered the recording of indigenous language audio resources.</li>
-            <li>Maintained proficiency in the Mandarin Chinese language.</li>
-            <li>Reported to the church on the status of engagement with the unreached people group.</li>
-            <li>Functioned in a matrix organization with the International Mission Board and Calvary Baptist church.</li>
-            <li>Adapted to constantly shifting challenges.</li>
-            <li>Supported a team of workers towards common goals.</li>
-          </ul>
-        </p>
-        <br>
-        <h2>Projects</h2>
-        <p>
-          <ul>
-            <li><a href="https://didgeri.github.io/resume/resume.html" target="none" class="light_bg">This Resume as resizable page.</a></li>
-          </ul>
-        </p>
-      </div>
-  </div>
-
+    <div>
+        <h1 style="text-align:center">Portfolio</h1>
+        <ul>
+            <li>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/album/2G9IkgMJ2Wq6arubipyC8v?utm_source=generator" width="50%" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+                <br>
+                This is my solo folk-rock project.  All aspects in 2019.<br><br>
+            </li>
+            <li>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/album/0Di49e9HNfwjeQe7ttiice?utm_source=generator" width="50%" height="380"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+                <br>
+                Engineered, co-wrote (<i>God Saved the World</i>), produced, drums, guitars, bass, harmony (<i>Regret</i>), and mastered in 2018 - 2019.<br><br>
+            </li>
+            <li>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/544460628&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+                Engineered, produced, mixed, mastered, bass, electric guitars, drums, keyboards, percussion in 2018.<br><br>
+            </li>
+            <li>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/7oAJ0smJc54dwFOEIhLYAR?utm_source=generator" width="50%" height="380"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+                <br>
+                This is my worship music project.  Three albums/eps.  All aspects except for guest appearances by other artists from 2012 to 2017.<br><br>
+            </li>
+            <li>
+                <iframe style="border: 0; width: 100%; height: 42px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=1392136249/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/"
+                    seamless>
+                    <a href="https://michaelmcmaster.bandcamp.com/album/little-stick-houses">Little Stick Houses by Michael McMaster</a>
+                </iframe>
+                Engineered, mixed, mastered in 2012.
+                <br><br>
+            </li>
+            <li>
+                <iframe style="border: 0; width: 100%; height: 42px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=1881889760/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/"
+                    seamless>Open The Door by Remy Harris
+                </iframe>
+                Engineered, mixed, mastered, and percussion in 2012.
+                <br><br>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
