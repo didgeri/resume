@@ -16,7 +16,7 @@ a:hover.dark_bg, a:hover.light_bg, a:hover { color: green; }
   grid-template-columns: 100%;
 }
 
-@media all and (min-width: 1125px) and (orientation:landscape){
+@media all and (min-width: 1125px){
   [class*="grid-container"] {
     display: grid;
     grid-template-columns: 29% 71%;
